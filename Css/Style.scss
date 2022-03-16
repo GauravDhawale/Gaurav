@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body{
+    font-family: 'Syncopate', sans-serif;
+    display: flex;
+    overflow: scroll;
+}
+@keyframes shake { 
+    0%, 100% {transform: translateX(0);} 
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
+    20%, 40%, 60%, 80% {transform: translateX(10px);} 
+}
+.navigation{
+    position: fixed;
+    height: 100vh;
+    z-index: 1;
+}
+.before{
+    width: 7rem;
+    background-color: #ffffff;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+.after{
+    height: inherit;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    transform: translateX(-100%);
+    background-color: #ffffff;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+.close{
+    position: absolute;
+    top: 5%;
+    right: 13%;
+    cursor: pointer;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#Home{
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    color: aliceblue;
+}
+#Projects,#About,#Contact{
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+#Projects{
+    padding: 1rem 4rem;
+}
+#Projects img{
+    width: 400px;
+    margin: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+#Projects img:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#Projects p{
+    font-size: 3rem;
+    margin: 2%;
+}
+#Projects .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 80vh;
+}
+#About{
+    background-image: url('../Images/About.png');
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#Home p{
+    position: absolute;
+    top: 45%;
+    left: 8%;
+    font-size: 5rem;
+}
+#Home span{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+#Home svg{
+    margin-left: 12%;
+    cursor: pointer;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+}
+.shake{
+    animation-name: shake;
+    animation-iteration-count: infinite;
+}
+#About p{
+    font-size: 2.7rem;
+}
+.Intro{
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    text-align: left;
+}
+#About img{
+    width: 450px;
+}
+.Aboutme{
+    position: absolute;
+    width: 20rem;
+    right: 5%;
+    bottom: 8%;
+}
+.Aboutme div{
+    font-size: 1.3rem;
+}
+.Aboutme label{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+}
+#Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Contact .Mail{
+    font-size: 2vw;
+    margin-bottom: 3vw;
+}
+#Contact a{
+    font-size: 1vw;
+}
+#Contact .Me{
+    width: 350px;
+}
+#Contact a img{
+    width: 40px;
+}
+#Contact div a{
+    margin: 1vw;
+}
+.Zoomed{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.432);
+    position: fixed;
+    top: 0%;
+    left: 0;
+    z-index: -1;
+    opacity: 0%;
+}
+.Zoomed #Zoomedclose{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+.Zoomed img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Show{
+    opacity: 100%;
+    z-index: 3;
+}
